@@ -1,40 +1,65 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!-- v2 --
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<style>
-#contact { max-width: 600px; margin: 40px 0; }
-#contact form { display: flex; flex-direction: column; gap: 15px; }
-#contact input[type="email"], #contact textarea { padding: 10px; font-family: Arial, sans-serif; font-size: 14px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
-#contact button { padding: 12px; background-color: #333; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; }
-#contact button:hover { background-color: #555; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacAdam Stafford - Portfolio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; line-height: 1.6; }
+        nav { background: #111; color: white; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        nav a { color: white; text-decoration: none; margin-left: 25px; font-size: 14px; }
+        nav a:hover { color: #ccc; }
+        .nav-brand { font-weight: bold; font-size: 18px; }
+        .hero { background: linear-gradient(135deg, #111 0%, #333 100%); color: white; padding: 100px 40px; text-align: center; }
+        .hero h1 { font-size: 48px; margin-bottom: 10px; }
+        .hero p { font-size: 20px; color: #ccc; margin-bottom: 30px; }
+        .hero a { background: white; color: #111; padding: 12px 30px; text-decoration: none; border-radius: 4px; font-weight: bold; }
+        section { padding: 60px 40px; max-width: 1000px; margin: 0 auto; }
+        h2 { font-size: 32px; margin-bottom: 20px; border-bottom: 2px solid #111; padding-bottom: 10px; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
+        .about-grid img { width: 100%; border-radius: 8px; }
+        .skills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+        .skill-tag { background: #111; color: white; padding: 8px 16px; border-radius: 20px; font-size: 13px; }
+        .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-top: 20px; }
+        .project-card { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; }
+        .project-card img { width: 100%; height: 200px; object-fit: cover; }
+        .project-card .info { padding: 20px; }
+        .project-card h3 { margin-bottom: 8px; }
+        #contact { margin-top: 20px; }
+        #contact form { display: flex; flex-direction: column; gap: 15px; max-width: 500px; }
+        #contact input, #contact textarea { padding: 12px; font-size: 14px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; }
+        #contact button { padding: 12px; background: #111; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: bold; }
+        #contact button:hover { background: #333; }
+        footer { background: #111; color: #aaa; text-align: center; padding: 25px; margin-top: 40px; font-size: 13px; }
+        footer a { color: white; }
+        .experience-item { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+        .experience-item h3 { margin-bottom: 4px; }
+        .experience-item .date { color: #777; font-size: 14px; }
+    </style>
 </head>
 <body>
 
-<h1>MacAdam Stafford</h1>
-<p>MSU Student • Data Analyst • KIRO Founder</p>
+<nav>
+    <span class="nav-brand">MacAdam Stafford</span>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
-<ul>
-<li><a href="#">Twitter</a></li>
-<li><a href="#">Facebook</a></li>
-<li><a href="#">Dribbble</a></li>
-<li><a href="https://github.com/macadamstafford">Github</a></li>
-<li><a href="#">Email</a></li>
-</ul>
-
-<p>© MacAdam Stafford 2026. Design: <a href="http://html5up.net">HTML5 UP</a>.</p>
-
-<div id="contact">
-<h2>Get in Touch</h2>
-<form action="https://formspree.io/f/xnjbznnr" method="POST">
-<input type="hidden" name="_subject" value="Contact from MacAdam's site">
-<input type="email" name="email" placeholder="Your email" required>
-<textarea name="message" placeholder="Your message" rows="5" required></textarea>
-<button type="submit">Send</button>
-</form>
+<div class="hero">
+    <h1>MacAdam Stafford</h1>
+    <p>MSU Information Science Student • Data Analyst • Entrepreneur</p>
+    <a href="#contact">Get in Touch</a>
 </div>
 
-</body>
-</html>
-
-
+<section id="about">
+    <h2>About Me</h2>
+    <div class="about-grid">
+        <div>
+            <p>I'm a junior at Michigan State University studying Information Science with a focus on data analytics and technology-driven solutions. I'm passionate about using technology to solve real problems — whether that's building automated systems, analyzing data, or creating physical products.</p>
+            <br>
