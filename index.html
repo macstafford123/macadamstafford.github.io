@@ -15,6 +15,7 @@
         .hero h1 { font-size: 48px; margin-bottom: 10px; }
         .hero p { font-size: 20px; color: #ccc; margin-bottom: 30px; }
         .hero a { background: white; color: #111; padding: 12px 30px; text-decoration: none; border-radius: 4px; font-weight: bold; }
+        .hero a:hover { background: #eee; }
         section { padding: 60px 40px; max-width: 1000px; margin: 0 auto; }
         h2 { font-size: 32px; margin-bottom: 20px; border-bottom: 2px solid #111; padding-bottom: 10px; }
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
@@ -22,20 +23,35 @@
         .skills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
         .skill-tag { background: #111; color: white; padding: 8px 16px; border-radius: 20px; font-size: 13px; }
         .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-top: 20px; }
-        .project-card { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; }
+        .project-card { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; transition: transform 0.2s; }
+        .project-card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .project-card img { width: 100%; height: 200px; object-fit: cover; }
         .project-card .info { padding: 20px; }
         .project-card h3 { margin-bottom: 8px; }
         #contact { margin-top: 20px; }
         #contact form { display: flex; flex-direction: column; gap: 15px; max-width: 500px; }
         #contact input, #contact textarea { padding: 12px; font-size: 14px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; }
+        #contact input:focus, #contact textarea:focus { outline: none; border-color: #111; }
         #contact button { padding: 12px; background: #111; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: bold; }
         #contact button:hover { background: #333; }
         footer { background: #111; color: #aaa; text-align: center; padding: 25px; margin-top: 40px; font-size: 13px; }
         footer a { color: white; }
         .experience-item { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+        .experience-item:last-child { border-bottom: none; }
         .experience-item h3 { margin-bottom: 4px; }
         .experience-item .date { color: #777; font-size: 14px; }
+        .certifications { margin-top: 20px; }
+        .cert-item { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid #eee; }
+        .cert-item:last-child { border-bottom: none; }
+        .cert-badge { background: #111; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 16px; }
+            .about-grid { grid-template-columns: 1fr; }
+            .projects { grid-template-columns: 1fr; }
+            nav { padding: 15px 20px; flex-direction: column; gap: 10px; }
+            section { padding: 40px 20px; }
+        }
     </style>
 </head>
 <body>
@@ -53,7 +69,7 @@
 
 <div class="hero">
     <h1>MacAdam Stafford</h1>
-    <p>MSU Information Science Student • Data Analyst • Entrepreneur</p>
+    <p>MSU Information Science Student · Data Analyst · Entrepreneur</p>
     <a href="#contact">Get in Touch</a>
 </div>
 
@@ -61,12 +77,13 @@
     <h2>About Me</h2>
     <div class="about-grid">
         <div>
-            <p>I'm a junior at Michigan State University studying Information Science with a focus on data analytics and technology-driven solutions. I'm passionate about using technology to solve real problems - whether that's building automated systems, analyzing data, or creating physical products.</p>
+            <p>I'm a junior at Michigan State University studying Information Science with a focus on data analytics and technology-driven solutions. I'm passionate about using technology to solve real problems — whether that's building automated systems, analyzing data, or creating physical products.</p>
             <br>
-<p>Currently, I'm the founder of KIRO, a modular MagSafe accessories brand, and I've built automation systems that have generated over $32,000 in lifetime revenue. I'm always looking for ways to merge data, technology, and business.</p>
+            <p>Currently, I'm the founder of KIRO, a modular MagSafe accessories brand, and I've built automation systems that have generated over $32,000 in lifetime revenue. I'm always looking for ways to merge data, technology, and business.</p>
         </div>
         <div>
-            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500" alt="Technology workspace">
+            <!-- Unsplash free license (https://unsplash.com/license) - no attribution required -->
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&q=80&auto=format" alt="Laptop on a desk displaying code in a dark editor, representing a developer workspace">
         </div>
     </div>
 </section>
@@ -87,23 +104,72 @@
         <span class="skill-tag">Product Design</span>
         <span class="skill-tag">Git / Version Control</span>
     </div>
+    <div class="certifications">
+        <h3 style="margin-top: 30px; margin-bottom: 15px;">Certifications</h3>
+        <div class="cert-item">
+            <span class="cert-badge">✓</span>
+            <div>
+                <strong>Data Analysis Certificate</strong>
+                <span style="color: #777; font-size: 13px;"> — Global Career Accelerator, 2025</span>
+            </div>
+        </div>
+        <div class="cert-item">
+            <span class="cert-badge">✓</span>
+            <div>
+                <strong>Data Visualization Certificate</strong>
+                <span style="color: #777; font-size: 13px;"> — Global Career Accelerator, 2025</span>
+            </div>
+        </div>
+        <div class="cert-item">
+            <span class="cert-badge">✓</span>
+            <div>
+                <strong>AI Professional Skills Certificate</strong>
+                <span style="color: #777; font-size: 13px;"> — Global Career Accelerator, 2025</span>
+            </div>
+        </div>
+        <div class="cert-item">
+            <span class="cert-badge">✓</span>
+            <div>
+                <strong>Intercultural Skills Certificate</strong>
+                <span style="color: #777; font-size: 13px;"> — Global Career Accelerator, 2025</span>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="projects">
     <h2>Projects</h2>
     <div class="projects">
         <div class="project-card">
-            <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=500" alt="Phone accessories">
+            <!-- Unsplash free license - no attribution required -->
+            <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=500&q=80&auto=format" alt="Close-up of a smartphone with MagSafe accessories, representing the KIRO product line">
             <div class="info">
                 <h3>KIRO</h3>
-                <p>Modular MagSafe phone accessory ecosystem. Designed CNC aluminum products with professional mechanical engineering, from concept through manufacturing.</p>
+                <p>Modular MagSafe phone accessory ecosystem. Designed CNC aluminum products with professional mechanical engineering, from concept through manufacturing. Features include precision magnet arrays, NFC integration, and an ecosystem of mounting solutions.</p>
             </div>
         </div>
         <div class="project-card">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500" alt="Data analytics dashboard">
+            <!-- Unsplash free license - no attribution required -->
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80&auto=format" alt="Computer monitor showing a colorful data analytics dashboard with charts and graphs">
             <div class="info">
                 <h3>Referral Automation Platform</h3>
-                <p>Built automated marketing systems using Python scripting and data analysis, generating $32,000+ in lifetime revenue through optimized referral strategies.</p>
+                <p>Built automated marketing systems using Python scripting and data analysis, generating $32,000+ in lifetime revenue through optimized referral strategies and real-time lead processing.</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <!-- Unsplash free license - no attribution required -->
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80&auto=format" alt="Laptop screen displaying website analytics and traffic data visualizations">
+            <div class="info">
+                <h3>Deals Aggregation Platform</h3>
+                <p>Developed and deployed a deals and savings website generating 700+ daily page views with 148+ daily click-throughs, built with automated content updates and SEO optimization.</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <!-- Unsplash free license - no attribution required -->
+            <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=500&q=80&auto=format" alt="Code editor showing Python programming language syntax on a dark background">
+            <div class="info">
+                <h3>Server Infrastructure & Automation</h3>
+                <p>Manage a cloud VPS running automated workflows, web services, scheduled tasks, and multiple domains — all configured and maintained through command-line tools and scripting.</p>
             </div>
         </div>
     </div>
@@ -112,19 +178,29 @@
 <section id="experience">
     <h2>Experience</h2>
     <div class="experience-item">
-        <h3>Presales COE Intern - Motorola Solutions</h3>
+        <h3>Presales COE Intern — Motorola Solutions</h3>
         <p class="date">Starting May 2026</p>
-        <p>Upcoming fully remote internship in presales engineering.</p>
+        <p>Upcoming fully remote internship in presales engineering, supporting technical sales processes and solution design.</p>
     </div>
     <div class="experience-item">
-        <h3>Automation Developer - Self-Employed</h3>
+        <h3>Front Desk Concierge — Club Studio</h3>
+        <p class="date">May 2025 – Aug 2025</p>
+        <p>Managed front desk operations, member check-ins, and customer service for a fitness studio.</p>
+    </div>
+    <div class="experience-item">
+        <h3>Automation Developer — Self-Employed</h3>
         <p class="date">Dec 2024 – Present</p>
-        <p>Designed and deployed automated posting and referral marketing systems, generating $32,000+ in lifetime revenue.</p>
+        <p>Designed and deployed automated posting and referral marketing systems, generating $32,000+ in lifetime revenue through data-driven optimization.</p>
     </div>
     <div class="experience-item">
-        <h3>Data Entry Assistant - Corewell Health</h3>
+        <h3>Bar Back — Fifth Avenue, Royal Oak</h3>
+        <p class="date">May 2024 – Aug 2024</p>
+        <p>Supported bar operations during high-volume service in a fast-paced restaurant environment.</p>
+    </div>
+    <div class="experience-item">
+        <h3>Data Entry Assistant — Corewell Health</h3>
         <p class="date">Sep 2022 – May 2023</p>
-        <p>Extracted and organized 500+ patient records weekly from Epic to Excel, maintaining HIPAA compliance.</p>
+        <p>Extracted and organized 500+ patient records weekly from Epic to Excel, maintaining HIPAA compliance and data accuracy standards.</p>
     </div>
 </section>
 
@@ -133,17 +209,16 @@
     <p>Interested in working together or have a question? Send me a message.</p>
     <form action="https://formspree.io/f/xnjbznnr" method="POST">
         <input type="hidden" name="_subject" value="Contact from MacAdam's Portfolio">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
-        <textarea name="message" placeholder="Your message" rows="5" required></textarea>
+        <input type="text" name="name" placeholder="Your name" required aria-label="Your name">
+        <input type="email" name="email" placeholder="Your email" required aria-label="Your email address">
+        <textarea name="message" placeholder="Your message" rows="5" required aria-label="Your message"></textarea>
         <button type="submit">Send Message</button>
     </form>
 </section>
 
 <footer>
-    <p>&copy; 2026 MacAdam Stafford · <a href="https://www.linkedin.com/in/macadam-stafford">LinkedIn</a> · <a href="https://github.com/macstafford123">GitHub</a></p>
+    <p>&copy; 2026 MacAdam Stafford · <a href="https://www.linkedin.com/in/macadam-stafford">LinkedIn</a> · <a href="https://github.com/macstafford123">GitHub</a> · MSU Information Science</p>
 </footer>
 
 </body>
 </html>
-
