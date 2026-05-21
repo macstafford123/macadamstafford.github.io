@@ -109,7 +109,7 @@
         .section-sub { color: #666; font-size: 16px; max-width: 560px; margin-bottom: 40px; }
 
         /* ABOUT */
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
         .headshot {
             width: 75%;
             aspect-ratio: 4/5;
@@ -386,43 +386,6 @@
         </div>
         <div>
             <img src="me.jpg" alt="MacAdam Stafford" class="headshot">
-                <rect width="500" height="350" fill="#f5f5f5" rx="12"/>
-                <!-- Dashboard mockup -->
-                <rect x="20" y="20" width="460" height="30" fill="#111" rx="6"/>
-                <rect x="30" y="29" width="80" height="12" fill="#333" rx="3"/>
-                <circle cx="460" cy="35" r="8" fill="#333"/>
-                <!-- KPI cards -->
-                <rect x="20" y="62" width="105" height="60" fill="white" rx="6" stroke="#eee"/>
-                <rect x="30" y="72" width="40" height="6" fill="#ddd" rx="2"/>
-                <rect x="30" y="84" width="60" height="12" fill="#111" rx="2"/>
-                <rect x="137" y="62" width="105" height="60" fill="white" rx="6" stroke="#eee"/>
-                <rect x="147" y="72" width="40" height="6" fill="#ddd" rx="2"/>
-                <rect x="147" y="84" width="60" height="12" fill="#111" rx="2"/>
-                <rect x="254" y="62" width="105" height="60" fill="white" rx="6" stroke="#eee"/>
-                <rect x="264" y="72" width="40" height="6" fill="#ddd" rx="2"/>
-                <rect x="264" y="84" width="55" height="12" fill="#111" rx="2"/>
-                <rect x="371" y="62" width="109" height="60" fill="white" rx="6" stroke="#eee"/>
-                <rect x="381" y="72" width="40" height="6" fill="#ddd" rx="2"/>
-                <rect x="381" y="84" width="65" height="12" fill="#111" rx="2"/>
-                <!-- Line chart -->
-                <rect x="20" y="134" width="290" height="160" fill="white" rx="6" stroke="#eee"/>
-                <polyline points="40,260 80,240 120,220 160,195 200,175 240,150 280,130" fill="none" stroke="#111" stroke-width="2.5"/>
-                <circle cx="40" cy="260" r="3.5" fill="#111"/>
-                <circle cx="80" cy="240" r="3.5" fill="#111"/>
-                <circle cx="120" cy="220" r="3.5" fill="#111"/>
-                <circle cx="160" cy="195" r="3.5" fill="#111"/>
-                <circle cx="200" cy="175" r="3.5" fill="#111"/>
-                <circle cx="240" cy="150" r="3.5" fill="#111"/>
-                <circle cx="280" cy="130" r="3.5" fill="#111"/>
-                <rect x="30" y="144" width="80" height="7" fill="#eee" rx="2"/>
-                <!-- Bar chart -->
-                <rect x="322" y="134" width="158" height="160" fill="white" rx="6" stroke="#eee"/>
-                <rect x="338" y="240" width="20" height="38" fill="#111" rx="2"/>
-                <rect x="364" y="220" width="20" height="58" fill="#111" rx="2"/>
-                <rect x="390" y="195" width="20" height="83" fill="#111" rx="2"/>
-                <rect x="416" y="175" width="20" height="103" fill="#111" rx="2"/>
-                <rect x="442" y="155" width="20" height="123" fill="#111" rx="2"/>
-                <rect x="332" y="144" width="60" height="7" fill="#eee" rx="2"/>
         </div>
     </div>
 </div>
@@ -464,35 +427,55 @@
         <div class="certs-list">
             <h3>Certifications</h3>
             <div class="cert-grid">
-                <div class="cert-card">
+                <a class="cert-card" href="https://www.coursera.org/account/accomplishments/verify/4544D3PTSZXE" target="_blank" style="text-decoration:none;color:inherit;">
+                    <div class="cert-icon">🔵</div>
+                    <div>
+                        <div class="cert-name">Foundations: Data, Data, Everywhere</div>
+                        <div class="cert-issuer">Google · Apr 2026 · Verify ↗</div>
+                    </div>
+                </a>
+                <a class="cert-card" href="https://www.coursera.org/account/accomplishments/verify/HAYB44RS90H0" target="_blank" style="text-decoration:none;color:inherit;">
+                    <div class="cert-icon">🔵</div>
+                    <div>
+                        <div class="cert-name">Ask Questions to Make Data-Driven Decisions</div>
+                        <div class="cert-issuer">Google · Apr 2026 · Verify ↗</div>
+                    </div>
+                </a>
+                <a class="cert-card" href="https://www.coursera.org/account/accomplishments/verify/3BEOVRCM64UR" target="_blank" style="text-decoration:none;color:inherit;">
+                    <div class="cert-icon">🔵</div>
+                    <div>
+                        <div class="cert-name">Prepare Data for Exploration</div>
+                        <div class="cert-issuer">Google · Apr 2026 · Verify ↗</div>
+                    </div>
+                </a>
+                <a class="cert-card" href="https://www.credential.net/f1d22b65-01ef-48a4-b074-f7449c0d07b1#acc.BYwqoD1b" target="_blank" style="text-decoration:none;color:inherit;">
                     <div class="cert-icon">📊</div>
                     <div>
                         <div class="cert-name">Data Analysis Certificate</div>
-                        <div class="cert-issuer">Global Career Accelerator · 2025</div>
+                        <div class="cert-issuer">Global Career Accelerator · 2025 · Verify ↗</div>
                     </div>
-                </div>
-                <div class="cert-card">
+                </a>
+                <a class="cert-card" href="https://www.credential.net/738f5862-7a61-47ce-a8e8-cd807f1f4093#acc.cmiBEzFC" target="_blank" style="text-decoration:none;color:inherit;">
                     <div class="cert-icon">📈</div>
                     <div>
                         <div class="cert-name">Data Visualization Certificate</div>
-                        <div class="cert-issuer">Global Career Accelerator · 2025</div>
+                        <div class="cert-issuer">Global Career Accelerator · 2025 · Verify ↗</div>
                     </div>
-                </div>
-                <div class="cert-card">
+                </a>
+                <a class="cert-card" href="https://www.credential.net/b3b6ef62-247c-40b0-b9af-592e0ce8c3b5#acc.LjX6NUpR" target="_blank" style="text-decoration:none;color:inherit;">
                     <div class="cert-icon">🤖</div>
                     <div>
                         <div class="cert-name">AI Professional Skills Certificate</div>
-                        <div class="cert-issuer">Global Career Accelerator · 2025</div>
+                        <div class="cert-issuer">Global Career Accelerator · 2025 · Verify ↗</div>
                     </div>
-                </div>
-                <div class="cert-card">
+                </a>
+                <a class="cert-card" href="https://www.credential.net/f79256cb-7a54-4bab-9199-b05357728cff#acc.qiQOeR6M" target="_blank" style="text-decoration:none;color:inherit;">
                     <div class="cert-icon">🌐</div>
                     <div>
                         <div class="cert-name">Intercultural Skills Certificate</div>
-                        <div class="cert-issuer">Global Career Accelerator · 2025</div>
+                        <div class="cert-issuer">Global Career Accelerator · 2025 · Verify ↗</div>
                     </div>
-                </div>
-                <!-- Add new certs here as you earn them -->
+                </a>
             </div>
         </div>
     </div>
