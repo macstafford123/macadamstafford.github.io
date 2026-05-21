@@ -6,7 +6,7 @@ My personal portfolio. Plain HTML and CSS, no frameworks.
 
 - Projects I've actually built and run (KIRO, referral platform, deals site, VPS)
 - Skills, certs, and work history
-- Data analytics section — adding projects throughout junior/senior year
+- Data analytics section - adding projects throughout junior/senior year
 - Contact
 
 ## Tech
